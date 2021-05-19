@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity} from 'react-native'
 import {Header} from 'react-native-elements'
 
-export default class HomeScreen extends Component{
+export default class App extends Component{
   constructor(){
     super();
     this.state={
@@ -16,7 +16,7 @@ export default class HomeScreen extends Component{
   }
 
 
-  getWord=()=>{
+  getWord=(word)=>{
     var searchKeyword=word.toLowerCase()
     var url = "https://rupinwhitehatjr.github.io/dictionary/"+searchKeyword+".json"
     return fetch(url)
